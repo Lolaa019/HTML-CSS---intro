@@ -1,0 +1,29 @@
+.regular-paragraph {
+    text-indent: 2rem;
+    font-size: 1.55rem;
+    color: white;
+    background: deepskyblue;
+    padding: 2rem;
+    text-align:justify;
+    font-family: sans-serif;
+}
+#red-text {
+    color: #ff0000;
+}
+.green-text {
+    color: green;
+}
+.deepPink-text {
+    color: deeppink;
+
+}
+
+table {
+    border: 2px solid #000000;
+    border-collapse:collapse;
+<!-- debljina okvira, puna boja, nijansa -->
+}
+td, th {
+    border: 2px solid #000000;
+
+}

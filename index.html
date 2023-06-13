@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang = "en">           <!-- //KOMENTARI SE VIDE NA STRANICI!! jezik na kome se pise dokument. Engleski je neki standard.
+                          //html -> ime taga. lang -> atribut, "en" -> vrednost atributa -->
+<head>
+    <meta charset = "utf-8">     <!-- //standard kojim browser moze da cita č,ć,š,đ i ostale karaktere celog sveta :D.
+                                  // da nema toga, onda bi umesto tih slova stajalo [, ', \ ... -->
+                                 <!-- Znaci " //" se ne vazi ovde. -->
+    <title>
+        Naslov web stranice
+    </title>
+  <link rel="stylesheet" href = "style.css">
+
+</head>
+<body>
+Neki sadrzaj.
+<br> Ovo je u novom redu.
+Ovo nije u novom redu, iako je u htmlu napisano u sledecem redu odvojeno enterom.
+
+<p>
+    Ovo se ponasa kao paragraf, sto znaci da ima vec ugradjen sistem formatiranja. Ima veci razmak izmedju redova,
+    kao na primer kada citamo pasus u knjizi. Iako nisam dodala "br", on je automatski sam presao u novi red. Kada
+    nemamo dodat atribut kod ovog taga, on izgleda bas ovako kao sto je sada dok citamo.
+</p>
+<p style = "text-indent: 2rem; font-size: 1.55rem; color: yellowgreen; background: #770066">
+    <br> Boja se sastoji iz 6 cifara: Prve dve su crvena, druge dve zelena, poslednje dve su plava.
+     Najjaci intenzitet jedne od boja je ff, najslabiji je 00. Ukoliko hocemo belu, to je ffffff. Ukoliko hocemo crnu, to je 000000
+</p>
+
+
+<p class = "regular-paragraph green-text"> Mozemo da spajamo klase. Konkretno, u ovom
+    paragrafu korisimo klasu regular paragraph i klasu green. Kada pravimo klasu, pravimo je u sekciji style koja pripada delu head. onda
+    dodajeno tacku ispred naziva klase, a kada je koristimo, onda ne stavljamo tacku.....
+    sapien at velit hendrerit ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque vel malesuada ligula. Cras fringilla, libero sit amet viverra scelerisque, magna neque sollicitudin risus, quis tincidunt justo nunc in ante. Mauris accumsan consequat sapien, et maximus massa.
+    Donec eget egestas quam. Nam interdum diam vulputate, molestie erat non, commodo erat.
+</p>
+<p class = "regular-paragraph" >
+    Pellentesque porttitor neque nec sapien porttitor, sed accumsan mauris bibendum. Sed vitae sapien at velit hendrerit ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque vel malesuada ligula. Cras fringilla, libero sit amet viverra scelerisque, magna neque sollicitudin risus, quis tincidunt justo nunc in ante. Mauris accumsan consequat sapien, et maximus massa.
+    Donec eget egestas quam. Nam interdum diam vulputate, molestie erat non, commodo erat.
+</p>
+<p class = "regular-paragraph">
+    OVo je deo u kome primenjujemo .regular-paragraph deo da bismo videli kako to izgleda.
+    Pellentesque porttitor neque nec sapien porttitor, sed accumsan mauris bibendum. Sed vitae sapifringilla libero in maximus interdum.
+    Pellentesque porttitor neque nec sapien porttitor, sed accumsan mauris bibendum. Sed vitae sapi
+</p>
+<p class = "regular-paragraph" id="red-text" >
+    <br>
+    <a href ="#obican-paragraf"> skoci na obican paragraf koji ima crvena slova</a>
+    OVo je deo u kome cemo kombinovati regular paragraph i red text element. Selektor po Id-u elementa, kao sto je
+    u ovom slucaju red tekst, ima nesto veci prioritet u odnosu na regular paraggraph, pa su zato ipak slova crvena. Red text ima ispred znak #, sto znaci da on predstavlja
+    ID tog elementa. Koristimo ga tako sto u nazivu klase napisemo id="red-text". Na ovaj nacin ce sva slova u paragrafu
+    biti crvene boje. Ukoliko spajamo klase, kao sto je u ovom primeru, onda ih samo odvojimo znakom space i to je to.
+    Ukoliko bih iskoristila ovo red tekst, tj selektor po ID-u elementa, webstorm bi se bunio, jer je praksa da se na jednom elementu
+    moze koristiti jedna promena. Na ovaj nacin dolazi ko konfikta
+</p>
+<div class = "regular-paragraph deepPink-text">
+    <p>
+        Kada imamo vise paragrafa na kojima zelimo da primenimo CSS pravila, a pritom ne zelimo da ih grupimo pod jednim P tagom,
+        onda pravimo DIV tag. Div tag je tag koji sadrzi vise P tagova. U sustini, ponasa se kao jedan veliki paragraf koji
+        ima pod paragrafe. Na ovaj nacin mozemo izbeci veliki broj tagova koji se koriste da bi se napravio novi red (br tag).
+        Ovo je jedan P tag unutar DIV taga.
+    </p>
+    <p>
+        Ovo je drugi P tag unutar istog DIV taga. Iako nisam navela kako zelim da ovaj P izgleda, samim tim sto je u istom DIV tagu kao
+        prethodni P tag, poprimice ista pravila. Fakticki ce ova dva P taga biti identicna.
+    </p>
+    <p class = "green-text">
+        Ovo je treci paragraf unutar istog DIV taga. Razlika je u tome sto sam konrektno ovom P tagu dodala klasu koja ce koristiti
+        zelena slova. Iako su u DIV tagu navedena drugacija pravila u odnosu na ovaj paragraf, klasa koju dodelim ovom P tagu imace
+        prioritet u odnosu na DIV.
+
+    </p>
+
+    <p>
+        Pellentesque porttitor neque nec sapien porttitor, sed accumsan mauris bibendum. Sed vitae sapifringilla libero in maximus interdum.
+        Pellentesque porttitor neque nec sapien porttitor, sed accumsan mauris bibendum.
+    </p>
+
+</div>
+
+<p style="color: red"> <a id="obican-paragraf"></a>Pellentesque porttitor neque nec sapien porttitor, sed accumsan mauris bibendum. Sed vitae sapifringilla libero in maximus interdum.
+    Pellentesque porttitor neque nec sapien porttitor, sed accumsan mauris bibendum. Pellentesque porttitor neque nec sapien porttitor, sed accumsan mauris bibendum. Sed vitae sapifringilla libero in maximus interdum.
+    Pellentesque porttitor neque nec sapien porttitor, sed accumsan mauris bibendum. Pellentesque porttitor neque nec sapien porttitor, sed accumsan mauris bibendum. Sed vitae sapifringilla libero in maximus interdum.
+    Pellentesque porttitor neque nec sapien porttitor, sed accumsan mauris bibendum.
+</p>
+<p>TEST TEST TEST TEST TEST TEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TEST
+    TEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TEST
+    TEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TEST
+    TEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TEST
+
+</p>
+<br>
+<p>TEST TEST TEST TEST TEST TEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TEST
+    TEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TEST
+    TEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TEST
+    TEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TEST
+
+</p>
+<br>
+<p>TEST TEST TEST TEST TEST TEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TEST
+    TEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TEST
+    TEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TEST
+    TEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TEST
+
+</p>
+<br>
+<p>TEST TEST TEST TEST TEST TEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TEST
+    TEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TEST
+    TEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TEST
+    TEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TEST
+
+</p>
+<br>
+<p>TEST TEST TEST TEST TEST TEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TEST
+    TEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TEST
+    TEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TEST
+    TEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TESTTEST TEST TEST TEST TEST
+
+</p>
+<br>
+    <a href =""> Ovo je neki link. Pise se kao a href= "" >ovde pisemo kako se link zove
+    </a>
+<br>
+    <a href = "fajl.html">Ovo je link relativne putanje. U donjem levom uglu pretrazivaca
+    vidimo tu putanju kada stavimo kursor na link
+    </a>
+<!--  relativna -> http://localhost:63342/html-css/fajl.html
+      apsolutna -> http://localhost:63342/fajl.html-->
+
+<br>
+    <a href = "/fajl.html" > Ovo je link - aposlutna putanja
+    </a>
+<br> <a href = "/"> Vodi na naslovnu stranicu, tj na glavnu
+</a>
+<br>
+    <a href= "https://www.google.com/">Ovo je link - eksterni
+
+    </a>
+
+
+</body>
+
+
+</html>
